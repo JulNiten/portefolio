@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Développeur Web & Mobile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#accueil" data-lang="fr">Accueil</a><a href="#home" data-lang="en" style="display: none;">Home</a></li>
+                <li><a href="#competences" data-lang="fr">Compétences</a><a href="#skills" data-lang="en" style="display: none;">Skills</a></li>
+                <li><a href="#projets" data-lang="fr">Projets</a><a href="#projects" data-lang="en" style="display: none;">Projects</a></li>
+                <li><a href="#contact" data-lang="fr">Contact</a><a href="#contact" data-lang="en" style="display: none;">Contact</a></li>
+            </ul>
+            <div class="language-selector">
+                <button class="lang-btn active" data-lang="fr">FR</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Accueil/Home -->
+    <section id="accueil" class="hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>Jules TOUGLO</h1>
+            <p class="subtitle" data-lang="fr">Développeur Full Stack & Mobile | Expert Flutter & Laravel</p>
+            <p class="subtitle" data-lang="en" style="display: none;">Full Stack & Mobile Developer | Flutter & Laravel Expert</p>
+            <p class="description" data-lang="fr">
+                Transformant des idées en applications digitales exceptionnelles.
+                Spécialisé dans la création d'expériences utilisateur intuitives et
+                d'architectures robustes, je m'engage à livrer des solutions qui
+                allient élégance technique et impact business.
+            </p>
+            <p class="description" data-lang="en" style="display: none;">
+                Transforming ideas into exceptional digital applications.
+                Specialized in creating intuitive user experiences and
+                robust architectures, I am committed to delivering solutions
+                that combine technical elegance and business impact.
+            </p>
+            <div class="cta-buttons">
+                <a href="#projets" class="btn primary" data-lang="fr">Découvrir mes réalisations</a>
+                <a href="#projects" class="btn primary" data-lang="en" style="display: none;">Discover my work</a>
+                <a href="#contact" class="btn secondary" data-lang="fr">Échangeons ensemble</a>
+                <a href="#contact" class="btn secondary" data-lang="en" style="display: none;">Let's connect</a>
+                <a href="assets/CV_Jules_TOUGLO.pdf" download class="btn secondary" data-lang="fr">
+                    <i class="fas fa-download"></i> Télécharger mon CV
+                </a>
+                <a href="assets/CV_Jules_TOUGLO_EN.pdf" download class="btn secondary" data-lang="en" style="display: none;">
+                    <i class="fas fa-download"></i> Download my CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À propos/About -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <div class="about-text" data-aos="fade-left">
+                <h2 data-lang="fr">Mon Parcours</h2>
+                <h2 data-lang="en" style="display: none;">My Journey</h2>
+                <ul class="experience-list">
+                    <div class="about-image mb-4 ml-2" data-aos="fade-left">
+                        <img src="assets/monprofil.jpg" alt="Jules TOUGLO - Développeur Full Stack">
+                    </div>
+                    <li>
+                        <strong>EEBTP (Avril 2024 - Août 2024)</strong><br>
+                        Développement d'une plateforme web et mobile de gestion des magasins sur les chantiers
+                    </li>
+                    <li>
+                        <strong>eGo (Septembre 2023 - Octobre 2023)</strong><br>
+                        Développement d'applications web et mobile pour l'échange d'informations et d'alertes
+                        entre les états membres de l'UA
+                    </li>
+                    <li>
+                        <strong>Darollo Technologies (Juin 2023 - Août 2023)</strong><br>
+                        Collaboration au développement d'applications web et mobile pour un logiciel de
+                        gestion d'établissement scolaire
+                    </li>
+                </ul>
+            </div>
+            <div class="about-text" data-aos="fade-right">
+                <p data-lang="fr">
+                    <span class=" highlight">Développeur Flutter passionné</span>, spécialisé en backend avec
+                    <span class="highlight">Laravel</span> et <span class="highlight">Django</span>. Formé à
+                    <span class="highlight">l'IAI-TOGO</span> en Génie Logiciel. <span class="highlight">Analyste Junior
+                        en Management de Projets</span>
+                </p>
+                <p data-lang="en" style="display: none;">
+                    <span class="highlight">Passionate Flutter Developer</span>, specialized in backend with
+                    <span class="highlight">Laravel</span> and <span class="highlight">Django</span>. Trained at
+                    <span class="highlight">IAI-TOGO</span> in Software Engineering. <span class="highlight">Junior Analyst
+                        in Project Management</span>
+                </p>
+
+                <ul class="formation-list">
+                    <li>Une approche méthodique du développement logiciel</li>
+                    <li>Des compétences avancées en architecture système</li>
+                    <li>Une expertise en gestion de projets informatiques</li>
+                    <li>Une maîtrise des méthodologies de développement agile</li>
+                </ul>
+
+                <p><span class="highlight">Analyste Junior en Management de Projets</span>
+                </p>
+                <ul class="expertise-list">
+                    <li>Concevoir des solutions adaptées aux besoins spécifiques des clients</li>
+                    <li>Optimiser les processus de développement</li>
+                    <li>Assurer la qualité et la maintenabilité du code</li>
+                    <li>Gérer efficacement les délais et les ressources</li>
+                </ul>
+            </div>
+        </div>
+        <div class="about-text" data-aos="fade-left">
+            <h3 class="section-subtitle">Technologies Maîtrisées</h3>
+            <div class="skills-highlight">
+                <div class="skill-group">
+                    <h4>Langages</h4>
+                    <span>Python</span>
+                    <span>PHP</span>
+                    <span>Dart</span>
+                    <span>HTML/CSS</span>
+                    <span>C#</span>
+                </div>
+                <div class="skill-group">
+                    <h4>Frameworks</h4>
+                    <span>Flutter</span>
+                    <span>Django</span>
+                    <span>Laravel</span>
+                    <span>Bootstrap</span>
+                    <span>.NET MAUI</span>
+                </div>
+                <div class="skill-group">
+                    <h4>Outils & Méthodologies</h4>
+                    <span>JIRA</span>
+                    <span>Adobe Photoshop</span>
+                    <span>Canva</span>
+                    <span>UML</span>
+                    <span>Méthode MERISE</span>
+                </div>
+            </div>
+            <div class="about-stats">
+                <div class="stat-item">
+                    <div class="stat-number">2+</div>
+                    <div class="stat-label">Années d'études supérieures</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4+</div>
+                    <div class="stat-label">Stages professionnels</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Langues maîtrisées</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="competences" class="skills">
+        <h2 data-aos="fade-up">Compétences principales</h2>
+        <div class="skills-grid">
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                <h3><i class="fas fa-code"></i> Langages & Frameworks</h3>
+                <ul>
+                    <li>Flutter</li>
+                    <li>Dart</li>
+                    <li>Laravel</li>
+                    <li>PHP</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                <h3><i class="fas fa-server"></i> Backend/API</h3>
+                <ul>
+                    <li>Django</li>
+                    <li>Firebase</li>
+                    <li>REST API</li>
+                    <li>Auth sécurisée</li>
+                </ul>
+            </div>
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                <h3><i class="fas fa-paint-brush"></i> Frontend</h3>
+                <ul>
+                    <li>HTML/CSS</li>
+                    <li>Tailwind</li>
+                    <li>Flutter Web</li>
+                </ul>
+            </div>
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                <h3><i class="fas fa-database"></i> Base de données</h3>
+                <ul>
+                    <li>MySQL</li>
+                    <li>PostgreSQL</li>
+                    <li>Firebase Firestore</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projets" class="projects">
+        <h2 data-aos="fade-up">Mes Réalisations</h2>
+        <div class="projects-grid">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-image">
+                    <img src="assets/techsolution.png" alt="TechSolution - Site Vitrine">
+                </div>
+                <div class="project-content">
+                    <h3>TechSolution - Site Vitrine</h3>
+                    <p class="project-description">
+                        Site vitrine moderne pour une entreprise de solutions informatiques au Togo.
+                        Interface responsive et élégante mettant en avant les services et l'expertise.
+                    </p>
+                    <ul>
+                        <li>Design moderne et professionnel</li>
+                        <li>Interface responsive (mobile-first)</li>
+                        <li>Animations fluides et interactives</li>
+                        <li>Formulaire de contact intégré</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://techsolution.pages.dev/" target="_blank" class="btn secondary">Voir le site <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-image">
+                    <img src="assets/fastclosing.png" alt="FastClosing - E-commerce">
+                </div>
+                <div class="project-content">
+                    <h3>FastClosing - Plateforme E-commerce</h3>
+                    <p class="project-description">
+                        Plateforme e-commerce complète avec système de gestion des ventes,
+                        authentification sécurisée et tableau de bord administrateur.
+                    </p>
+                    <ul>
+                        <li>Système d'authentification robuste</li>
+                        <li>Gestion des produits et catégories</li>
+                        <li>Tableau de bord administrateur</li>
+                        <li>Interface utilisateur intuitive</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span>Django</span>
+                        <span>Python</span>
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://ecom-closing.onrender.com/" target="_blank" class="btn secondary">Voir le site
+                            <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-image">
+                    <img src="assets/anoc.jpg" alt="Application de Gestion de Boutique">
+                </div>
+                <div class="project-content">
+                    <h3>ShopManager - Application de Gestion</h3>
+                    <p class="project-description">
+                        Application mobile et web complète pour la gestion de boutique,
+                        intégrant gestion des stocks, ventes, et rapports en temps réel.
+                    </p>
+                    <ul>
+                        <li>Application mobile Flutter cross-platform</li>
+                        <li>Backend Laravel avec API RESTful</li>
+                        <li>Gestion des stocks en temps réel</li>
+                        <li>Rapports et statistiques avancés</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span>Flutter</span>
+                        <span>Laravel</span>
+                        <span>MySQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="project-image">
+                    <img src="assets/portfolio.png" alt="Portfolio Personnel">
+                </div>
+                <div class="project-content">
+                    <h3>Portfolio Personnel</h3>
+                    <p class="project-description">
+                        Portfolio professionnel moderne présentant mes compétences,
+                        réalisations et expériences en développement web et mobile.
+                    </p>
+                    <ul>
+                        <li>Design moderne et responsive</li>
+                        <li>Animations fluides avec AOS</li>
+                        <li>Formulaire de contact interactif</li>
+                        <li>Optimisé pour les performances</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact">
+        <h2 data-aos="fade-up">Contact</h2>
+        <div class="contact-content" data-aos="fade-up" data-aos-delay="100">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div class="contact-details">
+                        <a href="tel:+22870933741">(+228) 70 93 37 41</a>
+                        <a href="tel:+22897731774">(+228) 97 73 17 74</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:julesleroi6@gmail.com">julesleroi6@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Lomé, TOGO</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/juliosisco/" target="_blank">LinkedIn</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/Julio-SISCO" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <form class="contact-form" data-aos="fade-up" data-aos-delay="200">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required placeholder="Votre nom">
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required placeholder="Votre email">
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" required placeholder="Votre message"></textarea>
+                </div>
+                <button type="submit" class="btn primary">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Portfolio Jules TOUGLO. Tous droits réservés.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
