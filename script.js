@@ -136,65 +136,50 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Language switching functionality
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize language buttons
     const langButtons = document.querySelectorAll('.lang-btn');
+    const currentLang = localStorage.getItem('language') || 'fr';
     
-    // Function to switch language
-    function switchLanguage(lang) {
-        // Update active button
-        langButtons.forEach(btn => {
-            btn.classList.remove('active');
-            if (btn.dataset.lang === lang) {
-                btn.classList.add('active');
-            }
-        });
+    // Set initial language
+    setLanguage(currentLang);
+    
+    // Language switch event listeners
+    langButtons.forEach(btn => {
+        // Make sure both buttons are visible
+        btn.style.display = 'block';
         
-        // Show/hide language-specific elements
-        document.querySelectorAll('[data-lang]').forEach(element => {
-            if (element.dataset.lang === lang) {
-                element.style.display = '';
-            } else {
-                element.style.display = 'none';
-            }
-        });
-
-        // Update section IDs for navigation
-        const navLinks = document.querySelectorAll('.nav-links a');
-        navLinks.forEach(link => {
-            if (lang === 'en') {
-                if (link.getAttribute('href') === '#accueil') link.setAttribute('href', '#home');
-                if (link.getAttribute('href') === '#competences') link.setAttribute('href', '#skills');
-                if (link.getAttribute('href') === '#projets') link.setAttribute('href', '#projects');
-            } else {
-                if (link.getAttribute('href') === '#home') link.setAttribute('href', '#accueil');
-                if (link.getAttribute('href') === '#skills') link.setAttribute('href', '#competences');
-                if (link.getAttribute('href') === '#projects') link.setAttribute('href', '#projets');
-            }
-        });
-
-        // Update form placeholders
-        const formInputs = document.querySelectorAll('.contact-form input, .contact-form textarea');
-        formInputs.forEach(input => {
-            const placeholder = input.getAttribute('placeholder');
-            if (lang === 'en') {
-                if (placeholder === 'Votre nom') input.setAttribute('placeholder', 'Your name');
-                if (placeholder === 'Votre email') input.setAttribute('placeholder', 'Your email');
-                if (placeholder === 'Votre message') input.setAttribute('placeholder', 'Your message');
-            } else {
-                if (placeholder === 'Your name') input.setAttribute('placeholder', 'Votre nom');
-                if (placeholder === 'Your email') input.setAttribute('placeholder', 'Votre email');
-                if (placeholder === 'Your message') input.setAttribute('placeholder', 'Votre message');
-            }
-        });
-    }
-
-    // Add click event listeners to language buttons
-    langButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const lang = this.dataset.lang;
-            switchLanguage(lang);
+        btn.addEventListener('click', function() {
+            const lang = this.getAttribute('data-lang');
+            setLanguage(lang);
+            
+            // Update active button state
+            langButtons.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Save language preference
+            localStorage.setItem('language', lang);
         });
     });
+});
 
-    // Set initial language (French)
-    switchLanguage('fr');
-}); 
+function setLanguage(lang) {
+    // Hide all language elements first
+    document.querySelectorAll('[data-lang]').forEach(element => {
+        // Skip language buttons - they should always be visible
+        if (element.classList.contains('lang-btn')) return;
+        
+        if (element.getAttribute('data-lang') === lang) {
+            element.style.display = '';
+        } else {
+            element.style.display = 'none';
+        }
+    });
+
+    // Update html lang attribute
+    document.documentElement.lang = lang;
+    
+    // Update active button state
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+}
